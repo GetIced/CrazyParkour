@@ -8,14 +8,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #05070d;
-      color: white;
+      background: #1a0d2b; /* dark purple background */
+      color: #f5e6c8; /* light gold text */
       overflow-x: hidden;
     }
     nav {
       width: 100%;
       padding: 20px 40px;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(30, 0, 60, 0.7);
       display: flex;
       align-items: center;
       position: fixed;
@@ -27,9 +27,9 @@
     .logo {
       font-size: 32px;
       font-weight: 900;
-      color: #00c3ff;
-      text-shadow: 0 0 15px #00c3ff;
-      margin-right: 20px; /* small space between logo and links */
+      color: #f5c518; /* gold */
+      text-shadow: 0 0 15px #f5c518;
+      margin-right: 20px;
     }
     nav .links {
       display: flex;
@@ -37,13 +37,13 @@
       flex-wrap: wrap;
     }
     nav a {
-      color: white;
+      color: #f5e6c8;
       text-decoration: none;
       font-size: 18px;
       transition: 0.3s;
     }
     nav a:hover {
-      color: #00c3ff;
+      color: #f5c518;
     }
     header {
       height: 100vh;
@@ -83,13 +83,13 @@
     header h1 {
       font-size: 80px;
       margin: 0;
-      text-shadow: 0 0 25px #00c3ff;
+      text-shadow: 0 0 25px #f5c518;
       animation: glow 3s infinite ease-in-out;
     }
     .ip {
       margin-top: 20px;
       font-size: 34px;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(30, 0, 60, 0.6);
       padding: 12px 24px;
       border-radius: 10px;
       display: inline-block;
@@ -98,29 +98,29 @@
       font-size: 42px;
       margin-top: 40px;
       font-weight: bold;
-      text-shadow: 0 0 10px #00c3ff;
+      text-shadow: 0 0 10px #f5c518;
     }
     .section {
       padding: 90px 40px;
       text-align: center;
       animation: fadeIn 1.5s ease;
     }
-    .features {
+    .features, .rules {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
-    .features div {
+    .features div, .rules div, .staff div {
       background: rgba(255, 255, 255, 0.05);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 195, 255, 0.2);
-      transition: transform 0.3s;
+      box-shadow: 0 0 20px rgba(245, 197, 24, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .features div:hover {
+    .features div:hover, .rules div:hover, .staff div:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(0, 195, 255, 0.4);
+      box-shadow: 0 0 30px rgba(245, 197, 24, 0.4);
     }
     .staff {
       display: grid;
@@ -129,22 +129,14 @@
       margin-top: 30px;
     }
     .staff div {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
       font-size: 20px;
-      box-shadow: 0 0 15px rgba(0, 195, 255, 0.2);
-      transition: 0.3s;
       text-align: center;
-    }
-    .staff div:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 195, 255, 0.5);
+      box-shadow: 0 0 15px rgba(245,197,24,0.2);
     }
     .discord-btn {
-      background: #5865F2;
+      background: #6b33a8; /* purple */
       padding: 15px 30px;
-      color: white;
+      color: #f5e6c8;
       border-radius: 10px;
       font-size: 24px;
       text-decoration: none;
@@ -152,25 +144,21 @@
       transition: 0.3s;
     }
     .discord-btn:hover {
-      background: #7289da;
+      background: #9b59b6;
     }
     .player-count {
       margin-top: 30px;
       font-size: 28px;
-      text-shadow: 0 0 10px #00c3ff;
+      text-shadow: 0 0 10px #f5c518;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
     @keyframes glow {
-      0% { text-shadow: 0 0 20px #00c3ff; }
-      50% { text-shadow: 0 0 40px #00c3ff; }
-      100% { text-shadow: 0 0 20px #00c3ff; }
+      0% { text-shadow: 0 0 20px #f5c518; }
+      50% { text-shadow: 0 0 40px #f5c518; }
+      100% { text-shadow: 0 0 20px #f5c518; }
     }
   </style>
 </head>
@@ -182,6 +170,7 @@
       <a href="#count">Release</a>
       <a href="#features">Features</a>
       <a href="#staff">Staff</a>
+      <a href="#rules">Rules</a>
       <a href="#discord">Discord</a>
     </div>
   </nav>
@@ -217,6 +206,33 @@
       <div>Developer — Mystical, CrunchyCrashy</div>
       <div>Admin — PandaTeddy, CloudsOnVr</div>
       <div>Moderator — PandaK, Figrollday65</div>
+    </div>
+  </div>
+
+  <!-- Rules Section -->
+  <div class="section" id="rules">
+    <h2>Server Rules</h2>
+    <div class="rules">
+      <div><strong>1. Respect Everyone</strong><br>No harassment, hate speech, or discrimination. Treat all players and staff with respect.</div>
+      <div><strong>2. No Cheating or Exploits</strong><br>Any use of hacks, exploits, or third-party software is strictly prohibited.</div>
+      <div><strong>3. No Advertising</strong><br>Do not advertise other servers or websites in chat or builds.</div>
+      <div><strong>4. No Griefing</strong><br>Do not destroy, steal, or sabotage other players’ builds or items.</div>
+      <div><strong>5. No Spamming</strong><br>Avoid excessive messages or repeated characters in chat.</div>
+      <div><strong>6. Keep Builds Appropriate</strong><br>All builds, skins, and usernames must be suitable for all ages.</div>
+      <div><strong>7. Fair Trading</strong><br>Do not scam, exploit, or manipulate other players during trades.</div>
+      <div><strong>8. Protect Your Account</strong><br>Do not share your login information with anyone.</div>
+      <div><strong>9. Follow Staff Instructions</strong><br>Respect all staff decisions to maintain a fair environment.</div>
+      <div><strong>10. No AFK Farming Abuse</strong><br>Do not exploit AFK mechanics or macroing to gain unfair advantages.</div>
+      <div><strong>11. No Impersonation</strong><br>Do not impersonate staff or other players in any way.</div>
+      <div><strong>12. Use English in Public Chat</strong><br>Keep global chat understandable for moderation and community.</div>
+      <div><strong>13. No NSFW Content</strong><br>Keep all builds, images, and messages safe for all players.</div>
+      <div><strong>14. Don’t Exploit Bugs</strong><br>Report bugs instead of using them to gain advantages.</div>
+      <div><strong>15. Respect Server Economy</strong><br>Do not manipulate or crash the in-game economy.</div>
+      <div><strong>16. No Multi-Accounting</strong><br>Each player may only have one account unless approved by staff.</div>
+      <div><strong>17. Keep Chat Civil</strong><br>No excessive arguing, flaming, or toxic behavior.</div>
+      <div><strong>18. Don’t Ask for Staff</strong><br>Do not repeatedly ask for admin or moderator status.</div>
+      <div><strong>19. Report Issues Properly</strong><br>Use the proper channels to report exploits, players, or bugs.</div>
+      <div><strong>20. Have Fun!</strong><br>Follow the rules, enjoy the server, and be part of a friendly community.</div>
     </div>
   </div>
 
@@ -277,5 +293,7 @@
   </script>
 </body>
 </html>
+
+
 
 
